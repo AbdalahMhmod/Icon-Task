@@ -199,6 +199,7 @@ namespace Icon.UI.Controllers
                 return NotFound();
             }
             return RedirectToAction("Login", "Account");
+
         }
 
 
