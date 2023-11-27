@@ -1,0 +1,40 @@
+﻿@using Icon.Core.DTOs.UserDTOs;
+@model UserInputDTO
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form id="registerForm" method="post">
+            <h2>Create a new account.</h2>
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-floating">
+                <input asp-for="@Model.Email" class="form-control" type="email"/>
+                <label asp-for="@Model.Email"></label>
+                <span asp-validation-for="@Model.Email" class="text-danger"></span>
+            </div>  
+            <div class="form-floating">
+                <input asp-for="@Model.UserName" class="form-control" type="text"/>
+                <label asp-for="@Model.UserName"></label>
+                <span asp-validation-for="@Model.UserName" class="text-danger"></span>
+            </div>  
+
+            <div class="form-floating">
+                <input asp-for="@Model.Password" class="form-control" autocomplete="new-password" aria-required="true" />
+                <label asp-for="@Model.Password"></label>
+                <span asp-validation-for="@Model.Password" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="@Model.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" />
+                <label asp-for="@Model.ConfirmPassword"></label>
+                <span asp-validation-for="@Model.ConfirmPassword" class="text-danger"></span>
+            </div>
+            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

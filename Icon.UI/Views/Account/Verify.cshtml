@@ -1,0 +1,14 @@
+﻿<div class="row">
+    <div class="col-md-4">
+        <form id="verificationForm" method="post">
+            <h2>Login to your account.</h2>
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-floating" style="margin-bottom: 30px">
+                <input id="code" name="code" class="form-control" type="text" placeholder="Verification code" />
+                <label for="code"></label>
+            </div>
+            <button id="verificationForm" type="submit" class="w-100 btn btn-lg btn-primary">Reset</button>
+        </form>
+    </div>
+</div>
